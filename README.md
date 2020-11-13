@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Pulley First Screen (Onboarding)
+
+You can find the deployed version [here](https://pulley-ankojh.netlify.app/)
+
+![Pulley Demo Gif](pulley.gif)
+
+
+---
+---
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
