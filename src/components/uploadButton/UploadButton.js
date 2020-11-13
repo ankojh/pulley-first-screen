@@ -1,11 +1,14 @@
 import React from 'react';
 import './UploadButton.css'
 
-const UploadButton = () => {
+const UploadButton = (props) => {
+  function clickHandler(mouseEvent){
+    typeof props.onDone === 'function' && props.onDone()
+  }
 
   return (
-    <div className="App-UploadButton">
-        <button> Upload </button>
+    <div className='App-UploadButton'>
+      <button onClick={clickHandler}> { props.text} </button>
     </div>
   );
 };

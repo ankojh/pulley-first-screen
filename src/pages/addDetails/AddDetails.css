@@ -1,15 +1,41 @@
 .App-AddDetails{
-
+  animation: detailsEntry 0.3s ease-in-out;
 }
 
 .details-go-back{
   color: #9F9F9F;
   display: flex;
   align-items: center;
+  padding: 20px 0px;
+  border-bottom: 1px solid #D6E0DC;
+}
+
+.details-go-back span:hover{
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .details-go-back span{
   margin-left: 10px;
   font-weight: 600;
   font-size: 14px;
+}
+
+.details-description{
+  font-weight: 400;
+  font-size: 12px;
+}
+
+
+.finish-message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  color: green;
+  font-weight: 600;
+}
+@keyframes detailsEntry{
+  0% {opacity: 0; transform: translate(-50px)}
+  100% {opacity: 1; transform: translate(0px)}
 }

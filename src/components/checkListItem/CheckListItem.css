@@ -1,28 +1,44 @@
+.App-CheckListItem-container{
+  border-bottom: 1px solid #D6E0DC;
+}
+
 .App-CheckListItem{
   display: grid;
   width:100%;
   grid-template-rows:50% 50%;
-  grid-template-columns: 75px 1fr;
-  grid-template-areas: "ico title"
-                        "ico description";
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-areas: "ico title open"
+                        "ico description open";
+  cursor: pointer;
+  min-height: 75px;
   cursor: pointer;
 }
+
+.App-CheckListItem:hover{
+  transition: all 0.3s;
+  background-color: #f6fbf9;
+}
+
+
+
 
 .item-icon{
   grid-area: ico;
   border-radius: 50%;
-  width:20px;
-  
+  width:30px;
+  justify-self: center;
+  align-self: center;
 }
 
 .item-icon.item-done{
-  background-color: green;
+  background-color: #078a07;
 }
 
 .item-title{
   grid-area: title;
   font-size: 13px;
   font-weight: 600;
+  align-self: flex-end;
 }
 
 .item-description{
@@ -30,3 +46,26 @@
   font-size: 12px;
   font-weight: 400;
 }
+
+.item-open{
+  transition: transform 0.3s;
+  grid-area: open;
+  justify-self: center;
+  align-self: center;
+  transform:rotate(180deg)
+}
+
+.item-open.item-isopen{
+  transition: all 0.3s;
+  transform:rotate(270deg)
+}
+
+/* .item-component{
+  animation: componentEntry 0.3s ease-in-out;
+}
+
+
+@keyframes componentEntry {
+  0% {height: 0%;}
+  100% {height: fit-content}
+} */

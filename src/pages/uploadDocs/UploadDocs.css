@@ -1,9 +1,15 @@
 .App-UploadDocs{
   width: 100%;
+  animation: entry 0.3s ease-in-out;
 }
 
 .App-UploadDocs .upload-description{
   font-size: 12px;
   font-weight: 400;
   margin-bottom: 40px;
+}
+
+@keyframes entry{
+  0% {opacity: 0; transform: translate(50px)}
+  100% {opacity: 1; transform: translate(0px)}
 }

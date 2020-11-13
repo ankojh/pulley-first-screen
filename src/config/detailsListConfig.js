@@ -7,8 +7,8 @@ const LIST = [
     description: 'Details on what founder shares are',
     isOpen: false,
     isDone: false,
-    component: UploadButton,
-    handler: ()=>{ console.log('talking to backend') }
+    component: <UploadButton text={'Add Shares'} />,
+    handler: ()=>{ console.log('talk to backend') }
   },
   {
     id: 'investments',
@@ -16,8 +16,8 @@ const LIST = [
     description: 'What are Investments, when you would have/add them',
     isOpen: false,
     isDone: false,
-    component: UploadButton,
-    handler: () => { console.log('talking to backend') }
+    component: <UploadButton text={'Add Investments'} />,
+    handler: () => { console.log('talk to backend') }
   },
   {
     id: 'equity',
@@ -25,8 +25,8 @@ const LIST = [
     description: 'Equity plan description',
     isOpen: false,
     isDone: false,
-    component: UploadButton,
-    handler: () => { console.log('talking to backend') }
+    component: <UploadButton text={'Add Equity'} />,
+    handler: () => { console.log('talk to backend') }
   },
   {
     id: 'grants',
@@ -34,8 +34,8 @@ const LIST = [
     description: 'Employee grant description',
     isOpen: false,
     isDone: false,
-    component: UploadButton,
-    handler: () => { console.log('talking to backend') }
+    component: <UploadButton text={'Add Grants'} />,
+    handler: () => { console.log('talk to backend') }
   },
   {
     id: 'review',
@@ -43,8 +43,8 @@ const LIST = [
     description: 'All done? Invite your lawyer to review your cap table',
     isOpen: false,
     isDone: false,
-    component: UploadButton,
-    handler: () => { console.log('talking to backend') }
+    component: <UploadButton text={'Confirm Cap Table'} />,
+    handler: () => { console.log('talk to backend') }
   }
   
 ]
