@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ResizeContextProvider from './contexts/resizeContext';
 
 ReactDOM.render(
   <React.StrictMode>
+    <ResizeContextProvider>
     <App />
+    </ResizeContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

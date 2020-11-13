@@ -2,4 +2,32 @@
   width: 100%;
   height: 100%;
   font-family: 'Inter', sans-serif;
+  margin: 20px;
+}
+
+.App.wide-screen{
+  width: 740px;
+  margin: auto;
+}
+
+.App-Heading{
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+
+.App.wide-screen .App-Heading{
+  margin-top: 40px;
+  font-size: 25px;
+}
+
+.App-Heading-Description{
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.App.wide-screen .App-Heading-Description{
+  font-size: 15px;
 }

@@ -1,0 +1,9 @@
+.App-UploadDocs{
+  width: 100%;
+}
+
+.App-UploadDocs .upload-description{
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}

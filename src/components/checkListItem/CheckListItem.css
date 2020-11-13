@@ -1,0 +1,32 @@
+.App-CheckListItem{
+  display: grid;
+  width:100%;
+  grid-template-rows:50% 50%;
+  grid-template-columns: 75px 1fr;
+  grid-template-areas: "ico title"
+                        "ico description";
+  cursor: pointer;
+}
+
+.item-icon{
+  grid-area: ico;
+  border-radius: 50%;
+  width:20px;
+  
+}
+
+.item-icon.item-done{
+  background-color: green;
+}
+
+.item-title{
+  grid-area: title;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.item-description{
+  grid-area: description;
+  font-size: 12px;
+  font-weight: 400;
+}

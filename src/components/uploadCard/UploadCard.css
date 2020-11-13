@@ -1,3 +1,42 @@
 .App-UploadCard{  
-  
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 75px 1fr;
+  grid-template-areas: "ico title"
+                        "ico description";
+  background-color: #f6fbf9;
+  border: 2px solid #53b58ee8;
+  border-radius: 5px;
+  margin:20px 0px;
+  padding: 20px 0px;
+  width:100%;
+  cursor: pointer;
+  min-height: 120px;
+  box-sizing: border-box;
+}
+
+.App-UploadCard:hover{
+  transition: all 0.3s;
+  transform: scale(1.005);
+  box-shadow: 0px 0px 10px #d4d4d4e8;
+  /* border: 2px solid grey; */
+}
+
+.UploadCard-Icon{
+  grid-area:  ico;
+  justify-self: center;
+  align-self: center;
+}
+
+.UploadCard-Title{
+  grid-area: title;
+  font-weight: 600;
+  font-size: 13px;
+  align-self: center;
+}
+
+.UploadCard-Description{
+  grid-area: description;
+  font-weight: 400;
+  font-size: 12px;
 }

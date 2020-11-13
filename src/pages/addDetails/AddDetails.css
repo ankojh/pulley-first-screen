@@ -1,0 +1,15 @@
+.App-AddDetails{
+
+}
+
+.details-go-back{
+  color: #9F9F9F;
+  display: flex;
+  align-items: center;
+}
+
+.details-go-back span{
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
