@@ -6,9 +6,12 @@ const UploadButton = (props) => {
     typeof props.onDone === 'function' && props.onDone()
   }
 
+
+
+
   return (
     <div className='App-UploadButton'>
-      <button onClick={clickHandler}> { props.text} </button>
+      <button onClick={clickHandler}> {props.isDone ? 'Remove ' : 'Add ' }{props.text} </button>
     </div>
   );
 };

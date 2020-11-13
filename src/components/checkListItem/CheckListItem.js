@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import './CheckListItem.css'
 import listCircle from '../../assets/Ellipse 176.png'
+import checkIcon from '../../assets/baseline_check_white_18dp.png'
 import { useHistory, useParams } from 'react-router-dom';
 import openIcon from '../../assets/Path 131.png'
 import { ResizeContext } from '../../contexts/resizeContext';
@@ -9,34 +10,39 @@ const CheckListItem = (props) => {
   const params = useParams();
   const history = useHistory();
   const isOpen = params.id === props.item.id;
-  const {isWideScreen} = useContext(ResizeContext);
+  const { isWideScreen } = useContext(ResizeContext);
 
-  function clickHandler(mouseEvent){
-
+  function clickHandler(mouseEvent) {
     let route = `/details/${props.item.id}`;
 
-    if(isOpen){
+    if (isOpen) {
       route = '/details';
     }
 
     history.push(route);
-  } 
+  }
 
-  function itemDone(){
-    typeof props.onDone === "function" && props.onDone(props.item.id);
-  } 
+  function toggleItemDone(mouseEvent) {
+    if(mouseEvent){
+      mouseEvent.stopPropagation()
+      mouseEvent.nativeEvent.stopImmediatePropagation();
+    }
+
+    const moveToNext = mouseEvent ? false : true;
+    typeof props.onDone === "function" && props.onDone(props.item.id, moveToNext);
+  }
 
   return (
-    <div className={`App-CheckListItem-container ${isWideScreen ? 'wide-screen' : ''}`}> 
+    <div className={`App-CheckListItem-container ${isWideScreen ? 'wide-screen' : ''}`}>
       <div className="App-CheckListItem" onClick={clickHandler}>
-        <img className={`item-icon ${props.item.isDone ? 'item-done' : ''}`} src={listCircle} alt='done' />
+        {!props.item.isDone && <img onClick={toggleItemDone} className='item-icon' src={listCircle} alt='done' />}
+        {props.item.isDone && <img onClick={toggleItemDone} className="item-icon-selected" src={checkIcon} alt='done' />}
         <div className="item-title">{props.item.title}</div>
         <div className="item-description">{props.item.description}</div>
         <img className={`item-open ${isOpen ? 'item-isopen' : ''}`} src={openIcon} alt="open" />
       </div>
       {isOpen && <div className="item-component">
-        {React.cloneElement(props.item.component, { onDone: itemDone})}
-        {/* {props.item.component} */}
+        {React.cloneElement(props.item.component, { onDone: toggleItemDone, isDone: props.item.isDone })}
       </div>}
     </div>
   );

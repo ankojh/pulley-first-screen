@@ -15,7 +15,7 @@
 }
 
 .App-AddDetails.wide-screen .details-go-back img{
-  width: 10px;
+  /* width: 10px; */
 }
 
 .details-go-back span:hover{
@@ -30,17 +30,18 @@
 }
 
 .App-AddDetails.wide-screen .details-go-back span{
-  font-size: 15px;
+  /* font-size: 15px; */
 }
 
 .details-description{
   font-weight: 400;
   font-size: 12px;
   margin-top: 10px;
+  color: #303030;
 }
 
 .App-AddDetails.wide-screen .details-description{
-  font-size: 15px;
+  /* font-size: 15px; */
   margin-top: 5px;
 }
 
@@ -55,7 +56,7 @@
 }
 
 .App-AddDetails.wide-screen .finish-message{
-  font-size:18px;
+  /* font-size:18px; */
 }
 
 

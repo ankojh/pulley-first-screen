@@ -1,6 +1,6 @@
 .App-UploadCard{  
   display: grid;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 45% 1fr;
   grid-template-columns: 75px 1fr;
   grid-template-areas: "ico title"
                         "ico description";
@@ -16,8 +16,8 @@
 }
 
 .App-UploadCard.wide-screen{
-  margin:20px 0px;
-  padding: 20px 10px;
+  /* margin:20px 0px; */
+  /* padding: 20px 10px; */
 }
 
 .App-UploadCard:hover{
@@ -37,19 +37,20 @@
   grid-area: title;
   font-weight: 600;
   font-size: 13px;
-  align-self: center;
+  align-self: flex-end;
 }
 
 .App-UploadCard.wide-screen .UploadCard-Title{
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 
 .UploadCard-Description{
   grid-area: description;
   font-weight: 400;
   font-size: 12px;
+  margin-top:5px
 }
 
 .App-UploadCard.wide-screen .UploadCard-Description {
-  font-size: 15px;
+  /* font-size: 15px; */
 }

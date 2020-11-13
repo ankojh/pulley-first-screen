@@ -5,7 +5,7 @@
 .App-CheckListItem{
   display: grid;
   width:100%;
-  grid-template-rows:50% 50%;
+  grid-template-rows:45% 50%;
   grid-template-columns: 50px 1fr 50px;
   grid-template-areas: "ico title open"
                         "ico description open";
@@ -30,6 +30,16 @@
   align-self: center;
 }
 
+.item-icon-selected {
+  border-radius: 50%;
+  background-color: #53B58D;
+  align-self: center;
+  justify-self: center;
+  width: 25px;
+  padding:2px;
+  grid-area: ico;
+}
+
 .App-CheckListItem-container.wide-screen .item-icon{
   width:30px;
 }
@@ -46,17 +56,18 @@
 }
 
 .App-CheckListItem-container.wide-screen .item-title{
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 
 .item-description{
+  margin-top:5px;
   grid-area: description;
   font-size: 12px;
   font-weight: 400;
 }
 
 .App-CheckListItem-container.wide-screen .item-title{
-  font-size: 15px;
+  /* font-size: 15px; */
 }
 
 .item-open{
@@ -69,7 +80,7 @@
 }
 
 .App-CheckListItem-container.wide-screen .item-open{
-  width: 10px;
+  /* width: 10px; */
 }
 
 .item-open.item-isopen{

@@ -7,18 +7,21 @@ import './CheckList.css'
 const CheckList = (props) => {
   const history = useHistory();
 
-  function itemDoneHandler(itemId){
+  function itemDoneHandler(itemId, moveToNext) {
     const list = [...props.list];
-    const itemIndex = list.findIndex(item=>item.id === itemId)
+    const itemIndex = list.findIndex(item => item.id === itemId)
     const item = list[itemIndex];
-    item.isDone = true;
+    item.isDone = !item.isDone;
     props.setList(list);
-    const nextItem = list[itemIndex+1];
-    if(nextItem){
-      history.push(`/details/${nextItem.id}`)
-    } 
-    else{
-      history.push('/details');
+
+    if (moveToNext) {
+      const nextItem = list[itemIndex + 1];
+      if (nextItem) {
+        history.push(`/details/${nextItem.id}`)
+      }
+      else {
+        history.push('/details');
+      }
     }
   }
 

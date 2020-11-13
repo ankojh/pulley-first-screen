@@ -7,7 +7,7 @@ const LIST = [
     description: 'Details on what founder shares are',
     isOpen: false,
     isDone: false,
-    component: <UploadButton text={'Add Shares'} />,
+    component: <UploadButton text={'Shares'} />,
     handler: ()=>{ console.log('talk to backend') }
   },
   {
@@ -16,7 +16,7 @@ const LIST = [
     description: 'What are Investments, when you would have/add them',
     isOpen: false,
     isDone: false,
-    component: <UploadButton text={'Add Investments'} />,
+    component: <UploadButton text={'Investments'} />,
     handler: () => { console.log('talk to backend') }
   },
   {
@@ -25,7 +25,7 @@ const LIST = [
     description: 'Equity plan description',
     isOpen: false,
     isDone: false,
-    component: <UploadButton text={'Add Equity'} />,
+    component: <UploadButton text={'Equity'} />,
     handler: () => { console.log('talk to backend') }
   },
   {
@@ -34,7 +34,7 @@ const LIST = [
     description: 'Employee grant description',
     isOpen: false,
     isDone: false,
-    component: <UploadButton text={'Add Grants'} />,
+    component: <UploadButton text={'Grants'} />,
     handler: () => { console.log('talk to backend') }
   },
   {
@@ -43,7 +43,7 @@ const LIST = [
     description: 'All done? Invite your lawyer to review your cap table',
     isOpen: false,
     isDone: false,
-    component: <UploadButton text={'Confirm Cap Table'} />,
+    component: <UploadButton text={'Cap Table'} />,
     handler: () => { console.log('talk to backend') }
   }
   
