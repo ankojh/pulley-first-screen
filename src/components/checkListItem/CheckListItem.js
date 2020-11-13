@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './CheckListItem.css'
 import listCircle from '../../assets/Ellipse 176.png'
 import { useHistory, useParams } from 'react-router-dom';
 import openIcon from '../../assets/Path 131.png'
+import { ResizeContext } from '../../contexts/resizeContext';
 
 const CheckListItem = (props) => {
   const params = useParams();
   const history = useHistory();
   const isOpen = params.id === props.item.id;
+  const {isWideScreen} = useContext(ResizeContext);
 
   function clickHandler(mouseEvent){
 
@@ -25,7 +27,7 @@ const CheckListItem = (props) => {
   } 
 
   return (
-    <div className="App-CheckListItem-container"> 
+    <div className={`App-CheckListItem-container ${isWideScreen ? 'wide-screen' : ''}`}> 
       <div className="App-CheckListItem" onClick={clickHandler}>
         <img className={`item-icon ${props.item.isDone ? 'item-done' : ''}`} src={listCircle} alt='done' />
         <div className="item-title">{props.item.title}</div>

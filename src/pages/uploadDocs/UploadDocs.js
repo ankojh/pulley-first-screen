@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Divider from '../../components/divider/Divider';
 import UploadCard from '../../components/uploadCard/UploadCard';
 import './UploadDocs.css'
 import excelIcon from '../../assets/noun_excel_150055 (3) 3.png'
 import papersIcon from '../../assets/noun_papers_2044084 (1) 1.png'
 import { useHistory } from 'react-router-dom';
+import { ResizeContext } from '../../contexts/resizeContext';
 
 const UploadDocs = () => {
 
   const history = useHistory();
+  const {isWideScreen} = useContext(ResizeContext)
 
   function uploadCardClicked(cardId){ 
     history.push('details');
   }
 
   return (
-    <div className="App-UploadDocs">
+    <div className={`App-UploadDocs ${isWideScreen ? 'wide-screen': ''}`}>
       <div className="upload-description">Select how you would like to create your cap table.</div>
 
       <UploadCard

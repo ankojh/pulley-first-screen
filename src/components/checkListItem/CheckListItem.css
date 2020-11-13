@@ -25,9 +25,13 @@
 .item-icon{
   grid-area: ico;
   border-radius: 50%;
-  width:30px;
+  width:20px;
   justify-self: center;
   align-self: center;
+}
+
+.App-CheckListItem-container.wide-screen .item-icon{
+  width:30px;
 }
 
 .item-icon.item-done{
@@ -41,10 +45,18 @@
   align-self: flex-end;
 }
 
+.App-CheckListItem-container.wide-screen .item-title{
+  font-size: 18px;
+}
+
 .item-description{
   grid-area: description;
   font-size: 12px;
   font-weight: 400;
+}
+
+.App-CheckListItem-container.wide-screen .item-title{
+  font-size: 15px;
 }
 
 .item-open{
@@ -52,7 +64,12 @@
   grid-area: open;
   justify-self: center;
   align-self: center;
-  transform:rotate(180deg)
+  transform:rotate(180deg);
+  width: 8px;
+}
+
+.App-CheckListItem-container.wide-screen .item-open{
+  width: 10px;
 }
 
 .item-open.item-isopen{

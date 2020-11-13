@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import CheckList from '../../components/checkList/CheckList';
 // import UploadButton from '../../components/uploadButton/UploadButton';
 import './AddDetails.css'
 import detailsList from '../../config/detailsListConfig'
 import backIcon from '../../assets/Path 131.png'
 import { useHistory } from 'react-router-dom';
+import { ResizeContext } from '../../contexts/resizeContext';
 
 const AddDetails = () => {
 
   const [list, setList] = useState([...detailsList])
   const [isAllDone, setIsAllDone] = useState(false)
+  const {isWideScreen} = useContext(ResizeContext)
 
   useEffect(()=>{
     const item = list.find(item=>!item.isDone);
@@ -28,7 +30,7 @@ const AddDetails = () => {
   }
 
   return (
-    <div className="App-AddDetails">
+    <div className={`App-AddDetails ${isWideScreen ? 'wide-screen' : ''}`}>
       <div className="details-description">Stuck on what to do? You can always come back here to check on what else you’ll need to add to complete your cap table.</div>
 
       <div onClick={backClickHandler} className="details-go-back">
