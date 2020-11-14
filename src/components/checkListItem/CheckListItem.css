@@ -25,7 +25,7 @@
 .item-icon{
   grid-area: ico;
   border-radius: 50%;
-  width:20px;
+  width:30px;
   justify-self: center;
   align-self: center;
 }
@@ -35,13 +35,17 @@
   background-color: #53B58D;
   align-self: center;
   justify-self: center;
-  width: 25px;
+  width: 24px;
   padding:2px;
   grid-area: ico;
 }
 
 .App-CheckListItem-container.wide-screen .item-icon{
-  width:30px;
+  /* width:30px; */
+}
+
+.App-CheckListItem-container.wide-screen .item-icon-selected {
+  /* width: 24px; */
 }
 
 .item-icon.item-done{

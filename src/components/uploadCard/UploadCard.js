@@ -12,9 +12,11 @@ const UploadCard = (props) => {
 
   return (
     <div className={`App-UploadCard ${isWideScreen ? 'wide-screen' : ''}`} onClick={clickHandler}>
-      <img className="UploadCard-Icon" alt="logo" src={props.icon}></img>
-      <span className="UploadCard-Title">{props.title}</span>
-      <span className="UploadCard-Description">{props.description}</span>
+      <img className="UploadCard-Icon" alt="logo" src={props.icon} height={props.iconHeight}></img>
+      <div className="UploadCard-Text">
+        <span className="UploadCard-Title">{props.title}</span>
+        <span className="UploadCard-Description">{props.description}</span>
+      </div>
     </div>
   );
 };

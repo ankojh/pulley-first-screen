@@ -3,7 +3,8 @@ import CheckList from '../../components/checkList/CheckList';
 // import UploadButton from '../../components/uploadButton/UploadButton';
 import './AddDetails.css'
 import detailsList from '../../config/detailsListConfig'
-import backIcon from '../../assets/Path 131.png'
+// import backIcon from '../../assets/Path 131.png'
+import backIcon from '../../assets/Path 131.svg'
 import { useHistory } from 'react-router-dom';
 import { ResizeContext } from '../../contexts/resizeContext';
 

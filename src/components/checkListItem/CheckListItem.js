@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import './CheckListItem.css'
-import listCircle from '../../assets/Ellipse 176.png'
-import checkIcon from '../../assets/baseline_check_white_18dp.png'
+// import listCircle from '../../assets/Ellipse 176.png'
+import listCircle from '../../assets/Ellipse 176.svg'
+import checkIcon from '../../assets/check-white-18dp.svg'
 import { useHistory, useParams } from 'react-router-dom';
-import openIcon from '../../assets/Path 131.png'
+// import openIcon from '../../assets/Path 131.png'
+import openIcon from '../../assets/Path 131.svg'
 import { ResizeContext } from '../../contexts/resizeContext';
 
 const CheckListItem = (props) => {
