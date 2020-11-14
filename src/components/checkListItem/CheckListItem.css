@@ -26,6 +26,7 @@
   grid-area: ico;
   border-radius: 50%;
   width:30px;
+  height: 30px;
   justify-self: center;
   align-self: center;
 }
@@ -36,6 +37,7 @@
   align-self: center;
   justify-self: center;
   width: 24px;
+  height: 24px;
   padding:2px;
   grid-area: ico;
 }
